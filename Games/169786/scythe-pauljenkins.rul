@@ -1,0 +1,24 @@
+rule "Score Scythe"
+when
+    /* Only the game definition is really needed, but LINQ doesn't work in 'then', so nice to define things here */
+    var game = Game(x => x.Name == "Scythe");
+    var popularity = Row(x => x.Name == "Popularity");
+    var stars = Row(x => x.Name == "Stars");
+    var territory = Row(x => x.Name == "Territory");
+    var resources = Row(x => x.Name == "Resources");
+    
+then
+    var popScale = 3.0;
+
+    if (popularity.Value <= 7.0)
+        popScale = 1.0;
+
+    else if (popularity.Value <= 13.0)
+        popScale = 2.0;
+
+    var score = ((popScale+2.0) * stars.Value) +
+    ((popScale + 1.0) * territory.Value) +
+    ((popScale) * (resources.Value * 0.5));
+
+    /* comment */
+    game.Score = score;

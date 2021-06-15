@@ -1,0 +1,28 @@
+{
+  "version": 0.1,
+  "author": "Paul Jenkins",
+  "name": "Scythe",
+  "bggid": "169786",
+  "description": "Diesel-punk area-of-control+engine builder game",
+  "rows": [
+    {
+      "name": "popularity",
+      "max": 18,
+      "min": 1,
+    },
+    {
+      "name": "stars",
+      "max": 6,
+      "min": 0
+    },
+    {
+      "name": "territory",
+    },
+    {
+      "name": "resources",
+    },    
+    {
+      "name": "bonus"
+    }
+  ]
+}
