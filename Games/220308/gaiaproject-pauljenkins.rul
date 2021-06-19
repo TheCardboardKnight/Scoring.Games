@@ -1,0 +1,9 @@
+rule "Score Gaia Project"
+when
+    var game = Game(x => x.Name == "Gaia Project");
+    var player = Player(x => x.Score >= 0.0);
+    var points = Row(x => x.Name == "points");
+    var resources = Row(x => x.Name == "resources");
+	
+then
+    player.Score = points + (resources / 3.0);

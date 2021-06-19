@@ -3,6 +3,8 @@
   "author": "Paul Jenkins",
   "name": "Scythe",
   "bggid": "169786",
+  "winner" : "highest",
+  "scoringtype" : "advanced",
   "description": "Diesel-punk area-of-control+engine builder game",
   "rows": [
     {

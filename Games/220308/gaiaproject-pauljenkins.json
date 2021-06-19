@@ -1,0 +1,17 @@
+{
+  "version": 0.1,
+  "author": "Paul Jenkins",
+  "name": "Gaia Project",
+  "bggid": "220308",
+  "winner" : "highest",
+  "scoringtype" : "advanced",
+  "description": "Expand, research, upgrade, and settle the galaxy with one of 14 alien species. ",
+  "rows": [
+    {
+      "name": "resources"
+    },
+	{
+		"name" : "points",
+	}
+  ]
+}
