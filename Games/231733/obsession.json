@@ -22,8 +22,11 @@
     {
       "Name": "Service"
     },
-	    {
+    {
       "Name": "Wealth"
+    },
+    {
+      "Name": "Courtship"
     }
   ],
   "ScoringType": "Advanced",
