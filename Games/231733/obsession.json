@@ -1,0 +1,32 @@
+{
+  "Author": null,
+  "BggId": "231733",
+  "Description": null,
+  "MaxPlayers": 4,
+  "MinPlayers": 1,
+  "Name": "Obsession",
+  "PlayerCount": 0,
+  "Rows": [
+    {
+      "Name": "ImprovementTile"
+    },
+    {
+      "Name": "GentryCard"
+    },
+    {
+      "Name": "ObjectiveCard"
+    },
+    {
+      "Name": "Reputation"
+    },
+    {
+      "Name": "Service"
+    },
+	    {
+      "Name": "Wealth"
+    }
+  ],
+  "ScoringType": "Advanced",
+  "Version": 0.1,
+  "Winner": "Highest"
+}

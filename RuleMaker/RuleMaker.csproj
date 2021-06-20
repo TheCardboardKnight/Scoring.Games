@@ -5,10 +5,27 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="..\Games\231733\obsession.json" Link="wwwroot\data\obsession.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Games\231733\obsession.rul" Link="wwwroot\data\obsession.rul"> <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="BoardGamer.BoardGameGeek" Version="0.7.2" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.7" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="5.0.7" PrivateAssets="all" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="NRules.RuleSharp" Version="0.0.7" />
+    <PackageReference Include="NRules.Runtime" Version="0.9.2" />
     <PackageReference Include="System.Net.Http.Json" Version="5.0.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\data\" />
+  </ItemGroup>
+
+
 
 </Project>

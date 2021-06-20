@@ -1,0 +1,58 @@
+﻿@page "/Obsession"
+
+<style>
+    input {
+        width: 50px
+    }
+
+    td {
+        padding: 2px;
+        margin-right: 5px;
+    }
+
+    tr {
+        margin: 2px;
+    }
+
+</style>
+<h3 @bind="Game.Name"></h3>
+<button @onclick="AddPlayersClicked">Add Player</button>
+<br />
+<br />
+
+@if (Players.Count > 0)
+{
+    <table>
+        <tr>
+            <th>Scores</th>
+            @foreach (var p in Players)
+            {
+                <th> <input @bind="p.Name" /> </th>
+            }
+        </tr>
+
+        @foreach (var row in Game.Rows)
+        {
+            <tr>
+                <td>@row.Name</td>
+
+                @foreach (var p in Players)
+                {
+                    <td>
+                        <input @bind="p.Rows.Single(r => r.Name == row.Name).Value" />
+                    </td>
+                }
+            </tr>
+        }
+
+        <tr>
+            <td>Final Score</td>
+            @foreach (var p in Players)
+            {
+                <td><label>@p.Score</label></td>
+            }
+        </tr>
+    </table>
+
+    <button @onclick="ScoreClicked">Calculate Scores</button>
+}

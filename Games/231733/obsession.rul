@@ -1,0 +1,37 @@
+rule "Score Obsession"
+when
+    var game = ScoringGame(x => x.Name == "Obsession");
+    var player = ScoringPlayer(x => x.Score >= 0.0);
+    var improvements = Row(x => x.Name == "ImprovementTile");
+    var gentry = Row(x => x.Name == "GentryCard");
+    var objective = Row(x => x.Name == "ObjectiveCard");
+    var rep = Row(x => x.Name == "Reputation");
+	var service = Row(x => x.Name == "Service");
+	var wealth = Row(x => x.Name == "Wealth");
+	
+then
+	var repScore = rep.Value;
+	var wealthScore = Math.Floor(wealth.Value / 200.0);
+	
+	if (rep.Value == 1.0)
+		repScore = 1.0;
+	if (rep.Value == 2.0)
+		repScore = 3.0;
+	if (rep.Value == 4.0)
+		repScore = 10.0;
+	if (rep.Value == 5.0)
+		repScore = 15.0;
+	if (rep.Value == 6.0)
+		repScore = 21.0;
+	if (rep.Value == 7.0)
+		repScore = 28.0;
+	if (rep.Value == 8.0)
+		repScore = 36.0;
+	if (rep.Value == 9.0)
+		repScore = 45.0;		
+		
+	var serviceScore = service.Value * 2.0;
+
+	var score = improvements.Value + gentry.Value + objective.Value + repScore + serviceScore + wealthScore;
+
+    player.Score = score;

@@ -1,5 +1,57 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
+<style>
+    .float {
+        float: left;
+        width: 45%;
+        margin: 5px;
+    }
 
-Welcome to your new app.
+    .clear {
+        clear: both;
+    }
+
+    textarea {
+        width: 100%;
+    }
+</style>
+
+<h2>Game Id</h2>
+<input @bind="GameId" />
+<br />
+(Gaia Project is 220308, Obsession is 231733)<br />
+<button class="btn btn-primary" @onclick="FetchClicked">Fetch</button>
+<br />
+
+<label for="scoringtype">Scoring Method</label>
+<br />
+<select id="scoringtype" @bind="ScoringType">
+    <option value="@RuleMaker.Models.ScoringType.Simple">Simple</option>
+    <option value="@RuleMaker.Models.ScoringType.Advanced">Advanced</option>
+</select>
+
+<br />
+
+<label for="winnertype">Winner Type</label>
+<br />
+<select id="winnertype" @bind="WinnerType">
+    <option value="@RuleMaker.Models.Winner.Highest">Highest</option>
+    <option value="@RuleMaker.Models.Winner.Lowest">Lowest</option>
+</select>
+
+
+<h2>Output</h2>
+<div>
+    <div class="clear">&nbsp;</div>
+    <div class="float">
+        <h3>JSON</h3>
+        <textarea @bind="JsonOutput" readonly="readonly" rows="15"></textarea>
+    </div>
+    <div class="float">
+        <h3>RUL</h3>
+        <textarea @bind="RulOutput" readonly="readonly" rows="15"></textarea>
+    </div>
+    <div class="clear">&nbsp;</div>
+
+
+</div>
