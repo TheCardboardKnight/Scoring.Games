@@ -6,7 +6,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    defaults:
+      run:
+        working-directory: ./RuleMaker
     steps:
     - uses: actions/checkout@v2
       with:
@@ -16,7 +18,6 @@ jobs:
       with:
         dotnet-version: '5.0.x'
     - name: Publish with dotnet
-      working-directory: ./RuleMaker
       run: dotnet publish --configuration Release --output build
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.1.0
