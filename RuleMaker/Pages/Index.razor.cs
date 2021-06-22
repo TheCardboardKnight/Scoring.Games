@@ -93,6 +93,7 @@ namespace RuleMaker.Pages
             scoringGame.Winner = WinnerType;
 
             JsonOutput = JsonConvert.SerializeObject(scoringGame, Formatting.Indented);
+            RulOutput = await Http.GetStringAsync(string.Format("data/BlankRule.txt?{0}", DateTime.UtcNow.Ticks));
             StateHasChanged();
         }
     }

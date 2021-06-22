@@ -15,14 +15,17 @@
         width: 100%;
     }
 </style>
+<h1>CardboardKnight.Scoring Template Generator</h1>
+<em>RuleMaker</em> helps generate templates for TheCardboardKnight.Scoring, by taking in a BGG ID and processing it.
 
-<h2>Game Id</h2>
+<h3>BGG Game Id</h3>
 <input @bind="GameId" />
 <br />
-(Gaia Project is 220308, Obsession is 231733)<br />
+(example: Gaia Project is 220308, Obsession is 231733)<br />
 <button class="btn btn-primary" @onclick="FetchClicked">Fetch</button>
 <br />
 
+<h3>Options</h3>
 <label for="scoringtype">Scoring Method</label>
 <br />
 <select id="scoringtype" @bind="ScoringType">

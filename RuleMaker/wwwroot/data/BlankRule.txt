@@ -1,0 +1,8 @@
+﻿rule "Score $GameName"
+when
+    var game = ScoringGame(x => x.Name == "$GameName");
+    var player = ScoringPlayer(x => x.Score >= 0.0);
+	
+then
+	var score = 1.0 + 1.0;
+    player.Score = score;
