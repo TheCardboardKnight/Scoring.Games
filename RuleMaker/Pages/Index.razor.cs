@@ -1,9 +1,7 @@
 ﻿using BoardGamer.BoardGameGeek.BoardGameGeekXmlApi2;
+using CardboardKnight.Scoring.Models;
 using Microsoft.AspNetCore.Components;
 using Newtonsoft.Json;
-using NRules;
-using NRules.RuleSharp;
-using RuleMaker.Models;
 using System;
 using System.Linq;
 using System.Net.Http;
