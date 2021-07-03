@@ -1,4 +1,4 @@
-#CardboardKnight.Scoring.Games
+# CardboardKnight.Scoring.Games
 Repository of [`CardboardKnight.Scoring`](https://github.com/TheCardboardKnight/Scoring.Spec/) formatted game scoring data.
 
 Organised into
