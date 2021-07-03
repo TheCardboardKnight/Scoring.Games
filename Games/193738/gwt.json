@@ -1,0 +1,59 @@
+{
+  "Author": "Paul Jenkins",
+  "BggId": "193738",
+  "Description": null,
+  "MaxPlayers": 4,
+  "MinPlayers": 1,
+  "Name": "Great Western Trail",
+  "Rows": [
+    {
+      "Name": "Money",
+      "Action": "divide",
+      "Amount": 5.0,
+      "Round" :  "down"
+    },
+    {
+      "Name": "Buildings",
+      "Action": "add"
+    },
+    {
+      "Name": "VP",
+      "Action": "add"
+    },
+    {
+      "Name": "Stations",
+      "Action": "add"
+    },
+    {
+      "Name": "Hazards",
+      "Action": "add"
+    },
+    {
+      "Name": "Cows",
+      "Action": "add"
+    },
+    {
+      "Name": "ObjectiveCards",
+      "Action": "add"
+    },
+    {
+      "Name": "StationMaster",
+      "Action": "add"
+    },
+    {
+      "Name": "Workers",
+      "Action": "add"
+    },
+    {
+      "Name": "ClearDisc",
+      "Action": "add"
+    },
+    {
+      "Name": "JobToken",
+      "Action": "add"
+    }
+  ],
+  "ScoringType": "Tally",
+  "Version": 0.1,
+  "Winner": "Highest"
+}
